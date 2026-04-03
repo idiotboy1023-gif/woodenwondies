@@ -1,0 +1,31 @@
+
+
+body {
+    background-image: url('./img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+button {
+    background-color: #039ad6; /* sky blue */
+    color: white;
+    padding: 15px 32px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #0c9bc6;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px #054555;
+}
+
+button:hover {
+    background-color: #1d5f6c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px #08323b;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #0a4c5d;
+} 
