@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
 </head>
 <body>
-    <h2>Enter The Form</h2><br>
-    <form action="index.html" method="get"><br>
+    <h2>Enter The Form</h2>
 
-        <label for="Username">Username:</label><br>
-        <input type="text" id="Username" name="Username" placeholder="Enter your Username" required><br>
+    <!-- Name input -->
+    <input type="text" id="nameInput" placeholder="Enter your Name" 
+           pattern="[A-Za-z\s]{2,50}" title="Only letters, min 2 characters" required>
+    <br><br>
 
-        <label for="name">Full Name:</label><br>
-        <input type="text" id="name" name="name" placeholder="Enter Your Name" required><br>
+    <!-- Age input -->
+    <input type="number" id="ageInput" placeholder="Enter your Age" 
+           min="1" max="120" required>
+    <br><br>
 
-                <label for="age">Age:</label><br>
-        <input type="number" id="Age" name="Age" placeholder="Enter age" min="1" max="99" required><br>
+    <!-- Gmail input -->
+    <input type="email" id="gmailInput" placeholder="Enter your Gmail" 
+           pattern="[a-z0-9._%+-]+@gmail\.com" title="Must be a valid Gmail address" required>
+    <br><br>
 
+    <!-- Buttons -->
+    <button onclick="saveData()">Save</button>
+    <button onclick="loadData()">Load</button>
+<br><br>
+    <button onclick="window.location.href='index.html'">Back Home</button>
 
-        <label for="email">Email Address:</label><br>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+    <p id="output"></p>
 
-
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea><br>
-
-
-        <input type="submit" value="Submit">
-    </form>
+    <script src="the-form.js"></script>
 </body>
 </html>
